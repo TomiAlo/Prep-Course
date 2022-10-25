@@ -78,7 +78,9 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(str1.lenght==str2.lenght){
+  let primerString=str1.length;
+  let segundoString=str2.length;
+  if(primerString==segundoString){
     return true;
   }
   else{
@@ -177,7 +179,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return Math.random() * (1 - 0) + 1;
+  return Math.random();
 }
 
 function esPositivo(numero) {
@@ -219,7 +221,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  let saludo= 'Hola' + nombre + '!';
+  let saludo= `Hola ${nombre}!`;
   return saludo;
 }
 
@@ -252,7 +254,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  let dolar = 0.985997;
+  let dolar = 1.20;
   let conversion = euro*dolar;
   return conversion;
 }
@@ -268,7 +270,7 @@ function esVocal(letra){
   let mensaje = 'Es vocal';
   letra.toLowerCase();
 
-  if(letra.lenght==1&&letra=='a'||letra=='e'||letra=='i'||letra=='o'||letra=='u'){
+  if(letra.length==1&&(letra=='a'||letra=='e'||letra=='i'||letra=='o'||letra=='u')){
     return mensaje;
   }
   else{

@@ -159,7 +159,7 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
   producto.calcularPrecioDescuento=function calcularPrecioDescuento(){
-    let resultado = producto.precio*this.porcentajeDeDescuento;
+    let resultado = producto.precio*producto.porcentajeDeDescuento;
     producto.precio = producto.precio-resultado;
     return producto.precio;
   };
